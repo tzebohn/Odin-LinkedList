@@ -84,6 +84,7 @@ export class LinkedList {
         //List only has one node
         if (!this.head.nextNode) {
             this.head = null
+            return
         }
         
         //List have multiple nodes
