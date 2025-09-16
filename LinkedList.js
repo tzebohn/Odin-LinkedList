@@ -123,4 +123,17 @@ export class LinkedList {
         }
         return null //Index not found
     }
+
+    //Returns string (value) -> (value)
+    toString () {
+        let result = [] //Use array to store each node's value
+        
+        let current = this.head
+        while (current) {
+            result.push(current.value)
+            current = current.nextNode
+        }
+        
+        return result.join("->")
+    }
 }
