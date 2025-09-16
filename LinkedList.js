@@ -110,4 +110,17 @@ export class LinkedList {
         
         return false
     }
+
+    //Returns the index of the node containing value
+    find (value) {
+        
+        let current = this.head
+        let index = 0
+        while (current) {
+            if (current.value === value) return index
+            current = current.nextNode
+            index++
+        }
+        return null //Index not found
+    }
 }
