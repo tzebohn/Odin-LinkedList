@@ -60,4 +60,18 @@ export class LinkedList {
         
         return current
     }
+
+    //Returns the node at given index
+    at (index) {
+        if (index < 0) return null
+        
+        let current = this.head
+        let count = 0
+        while(current) {
+            if (count === index) return current
+            current = current.nextNode
+            count++
+        }
+        return null //Node not found
+    }
 }
