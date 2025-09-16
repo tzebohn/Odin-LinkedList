@@ -44,4 +44,20 @@ export class LinkedList {
         }
         return count
     }
+
+    //Returns first node
+    head () {
+        return this.head 
+    }
+    
+    //Returns last node
+    tail () {
+        let current = this.head
+        
+        while (current.nextNode) {
+            current = current.nextNode
+        }
+        
+        return current
+    }
 }
