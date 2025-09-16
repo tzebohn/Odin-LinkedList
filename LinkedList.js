@@ -74,4 +74,27 @@ export class LinkedList {
         }
         return null //Node not found
     }
+
+    //Removes the last node
+    pop () {
+        
+        //List can be empty
+        if (!this.head) return;
+        
+        //List only has one node
+        if (!this.head.nextNode) {
+            this.head = null
+        }
+        
+        //List have multiple nodes
+        let current = this.head
+        let previous = null
+        
+        while (current.nextNode) {
+            previous = current
+            current = current.nextNode
+        }
+        
+        previous.nextNode = null
+    }
 }
