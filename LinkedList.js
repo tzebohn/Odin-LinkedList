@@ -27,7 +27,7 @@ export class LinkedList {
 
     //Insert the Node at start
     prepend (value) {
-        const newNode = newNode(value)
+        const newNode = new Node(value)
         newNode.nextNode = this.head
         this.head = newNode
     }
